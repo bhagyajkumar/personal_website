@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import "./app.css"
 import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
 function App() {
   return (
@@ -11,8 +12,8 @@ function App() {
       <NavBar />
       <Container className="text-white">
         <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/projects" element={<h1>projects page</h1>} />
+          <Route path="/" element={<Home />} />
+          <Route path="/projects" element={<Projects />} />
         </Routes>
       </Container>
     </Router>

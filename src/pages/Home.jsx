@@ -2,6 +2,7 @@ import React from 'react'
 
 import pfp from "../assets/images/pfp.png"
 import { Card, Button } from 'react-bootstrap'
+import {logos} from '../data/logos.js'
 
 function Home() {
     return (
@@ -16,21 +17,12 @@ function Home() {
             <br />
             <br />
             <div>
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/django.svg" alt="django" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/python-5.svg" alt="python" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/react-1.svg" alt="react" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/fastapi-1.svg" alt="FastAPI" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/flutter.svg" alt="flutter" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/postgresql.svg" alt="postgresql" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/dart.svg" alt="dart" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/nodejs-2.svg" alt="nodejs" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/mysql-6.svg" alt="mysql" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg" alt="mongodb" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/sqlite.svg" alt="sqlite" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/golang-1.svg" alt="golang" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg" alt="bootstrap" />
-                <img style={{ marginLeft: 5 }} height="70px" src="https://cdn.worldvectorlogo.com/logos/heroku-4.svg" alt="heroku" />
-
+                
+                {logos.map(({alt, url}) => {
+                    return(
+                        <img style={{ marginLeft: 5 }} height="70px" src={url} alt={alt} />
+                    )
+                })}
             </div>
 
             <div className="education">
@@ -61,6 +53,8 @@ function Home() {
                     </Card.Body>
                 </Card>
                 
+                <br />
+                <br />
                 </div>
 
         </div>

@@ -1,0 +1,16 @@
+export const logos = [
+    {"alt": "django", "url": "https://cdn.worldvectorlogo.com/logos/django.svg"},
+    {"alt": "python", "url": "https://cdn.worldvectorlogo.com/logos/python-5.svg"},
+    {"alt": "react", "url": "https://cdn.worldvectorlogo.com/logos/react-1.svg"},
+    {"alt": "fastapi", "url": "https://cdn.worldvectorlogo.com/logos/fastapi-1.svg"},
+    {"alt": "flutter", "url": "https://cdn.worldvectorlogo.com/logos/flutter.svg"},
+    {"alt": "postgresql", "url": "https://cdn.worldvectorlogo.com/logos/postgresql.svg"},
+    {"alt": "dart", "url": "https://cdn.worldvectorlogo.com/logos/dart.svg"},
+    {"alt": "nodejs", "url": "https://cdn.worldvectorlogo.com/logos/nodejs-2.svg"},
+    {"alt": "mysql", "url": "https://cdn.worldvectorlogo.com/logos/mysql-6.svg"},
+    {"alt": "mongodb", "url": "https://cdn.worldvectorlogo.com/logos/mongodb-icon-1.svg"},
+    {"alt": "sqlite", "url": "https://cdn.worldvectorlogo.com/logos/sqlite.svg"},
+    {"alt": "golang", "url": "https://cdn.worldvectorlogo.com/logos/golang-1.svg"},
+    {"alt": "bootstrap", "url": "https://cdn.worldvectorlogo.com/logos/bootstrap-4.svg"},
+    {"alt": "heroku", "url": "https://cdn.worldvectorlogo.com/logos/heroku-4.svg"},
+]
