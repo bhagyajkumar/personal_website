@@ -6,9 +6,9 @@ function Skills() {
     return (
         <div>
             {
-                skills.map(({skillName, progress})=>{
+                skills.map(({ skillName, progress }, index) => {
                     return (
-                        <SkillCard skillName={skillName} progress={progress}/>
+                        <SkillCard key={index} skillName={skillName} progress={progress} />
                     )
                 })
             }
