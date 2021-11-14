@@ -12,7 +12,9 @@ function Home() {
                 <Card.Body>
                     <div className="home">
                         <div className="d-flex info">
-                            <img width="250px" height="250px" src={pfp} className="rounded-circle" alt="Cinque Terre" style={{ margin: "20px" }} />
+                            <img width="250px" height="250px" src={pfp}
+                                className="rounded-circle" alt="Cinque Terre"
+                                style={{ margin: "20px", border: "5px solid #666" }} />
                             <div style={{ "margin": 0, transform: "translateY(40%)" }}>
                                 <h1>BHAGYAJ KUMAR B</h1>
                                 <h4>Full Stack Developer</h4>
