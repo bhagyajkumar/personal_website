@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 
 function ProjectCard(props) {
     return (
-        <Card className="bg-dark">
+        <Card className="bg-black">
             <Card.Header>
                 <Card.Title>{ props.name }</Card.Title>
             </Card.Header>

@@ -4,7 +4,7 @@ import { Card } from 'react-bootstrap'
 function ProjectsCard(props) {
     return (
         <div>
-            <Card className="bg-secondary">
+            <Card style={{backgroundColor: "#333"}}>
                 <Card.Header>
                     <h1>My Projects</h1>
                 </Card.Header>
