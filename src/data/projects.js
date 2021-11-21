@@ -5,6 +5,7 @@ export const projects = [
         githubLink: "https://github.com/bhagyajkumar/todolist-api",
         deployedLink: "https://fastapi-todolist.herokuapp.com/docs",
         platform: "FastAPI",
+        deployToHerokuLink: "https://heroku.com/deploy?template=https://github.com/bhagyajkumar/todolist-api"
     },
     {
         name: "Django Instagram Clone",

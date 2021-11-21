@@ -9,10 +9,10 @@ function Projects() {
             <br />
             <ProjectsCard>
                 {
-                    projects.map(({ name, description, githubLink, deployedLink, platform }, index) => {
+                    projects.map(({ name, description, githubLink, deployedLink, platform, deployToHerokuLink }, index) => {
                         return (
                             <div key={index}>
-                                <ProjectCard name={name} description={description} githubLink={githubLink} deployedLink={deployedLink} />
+                                <ProjectCard name={name} description={description} githubLink={githubLink} deployedLink={deployedLink} deployToHerokuLink={deployToHerokuLink} />
                                 <br />
                             </div>
                         )
