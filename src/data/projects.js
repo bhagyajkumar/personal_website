@@ -27,5 +27,11 @@ export const projects = [
         githubLink: "https://github.com/bhagyajkumar/django-ecommerce",
         deployedLink: null,
         platform: "Django",
+    },
+    {
+        name: "SFS GAMING BP",
+        description: "Project built for SFS GAMING (YouTuber). Basically a platform for sharing a blueprints for the game spaceflight simulator",
+        deployedLink: "https://sfsgaming.herokuapp.com/",
+        platform: "Django"
     }
 ]
