@@ -1,41 +1,29 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Card } from 'react-bootstrap'
-import ReactMarkdown from 'react-markdown'
-import axios from 'axios'
+import Gist from "react-gist"
+import { posts } from '../data/blog'
+import { Link } from 'react-router-dom'
 
 function Blog() {
-    const [posts, setPosts] = useState([])
-    useEffect(
-        () => {
-            axios.get("https://blogpostapi.deltawing.repl.co/")
-                .then((res) => {
-                    setPosts(res.data)
-                })
-        },
-        []
-    )
 
     return (
-        <div>
-            <br />
-            {posts.map(({ id, title, content }) => {
-                return (
-                    <>
-                        <Card className="bg-dark" key={id}>
-                            <Card.Header>
-                                <h1>{title}</h1>
-                            </Card.Header>
-                            <Card.Body>
-                                <p>
-                                    <ReactMarkdown>{content}</ReactMarkdown>
-                                </p>
-                            </Card.Body>
-                        </Card>
-                        <br />
-                    </>
+        <>
+        <br/>
+        {
+            posts.map(({id, title, description})=>{
+                return(
+                    <Card className='bg-dark' key={id}>
+                        <Card.Header>
+                            <Link to={id}><h5 className='text-white'>{title}</h5></Link>
+                        </Card.Header>
+                        <Card.Body>
+                            {description}
+                        </Card.Body>
+                    </Card>
                 )
-            })}
-        </div>
+            })
+        }
+        </>
     )
 }
 
