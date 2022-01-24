@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
-import { posts } from '../data/blog'
 import { Link } from 'react-router-dom'
 import {db} from '../firebase/config'
 import { collection, getDocs, query } from 'firebase/firestore'

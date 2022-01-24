@@ -8,10 +8,12 @@ import { documentId } from 'firebase/firestore';
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
+
+
 function BlogView() {
     const params = useParams()
     const [data, setData] = useState("")
-
+    
     useEffect(
         () => {
             const getData = async () => {
@@ -19,21 +21,22 @@ function BlogView() {
                 const qss = await getDocs(q)
                 const blogList = qss.docs.map(doc => Object.assign({}, { id: doc.id }, doc.data()))
                 fetch(blogList[0]["content_url"])
-                    .then((res) => {
-                        res.text()
-                            .then((data) => {
-                                setData(data)
-                            })
+                .then((res) => {
+                    res.text()
+                    .then((data) => {
+                        setData(data)
                     })
+                })
             }
             getData()
-        },
-        []
-    )
-
-    console.log("test")
+        }
+        )
+        
+        function Image(props) {
+            return <img {...props} style={{maxWidth: '100%'}} alt="test" />
+        }
     return (
-        <ReactMarkdown children={data} components={{
+        <ReactMarkdown renderers = {{image: Image}} components={{img: Image,
             code({ node, inline, className, children, ...props }) {
                 const match = /language-(\w+)/.exec(className || '')
                 return !inline && match ? (
