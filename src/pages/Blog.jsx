@@ -1,20 +1,33 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
-import Gist from "react-gist"
 import { posts } from '../data/blog'
 import { Link } from 'react-router-dom'
+import {db} from '../firebase/config'
+import { collection, getDocs, query } from 'firebase/firestore'
+
 
 function Blog() {
-
+    const [blogs, setBlogs] = useState([]);
+    useEffect(
+        ()=>{
+            const getBlogs = async ()=>{
+                const q = query(collection(db, 'blogs'))
+                const qss = await getDocs(q)
+                const blogList = qss.docs.map(doc=>Object.assign({}, {id: doc.id}, doc.data()))
+                setBlogs(blogList)
+            }
+            getBlogs()
+        }, []
+    )
     return (
         <>
         <br/>
         {
-            posts.map(({id, title, description})=>{
+            blogs.map(({id, title, description})=>{
                 return(
-                    <Card className='bg-dark' key={id}>
+                    <Card key={id} className='bg-dark'>
                         <Card.Header>
-                            <Link to={id}><h5 className='text-white'>{title}</h5></Link>
+                            <Link to={"/blog/"+id}><h5 className='text-white'>{title}</h5></Link>
                         </Card.Header>
                         <Card.Body>
                             {description}
