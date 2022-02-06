@@ -24,6 +24,7 @@ function Blog() {
         {
             blogs.map(({id, title, description})=>{
                 return(
+                    <>
                     <Card key={id} className='bg-dark'>
                         <Card.Header>
                             <Link to={"/blog/"+id}><h5 className='text-white'>{title}</h5></Link>
@@ -32,6 +33,8 @@ function Blog() {
                             {description}
                         </Card.Body>
                     </Card>
+                    <br />
+                    </>
                 )
             })
         }
