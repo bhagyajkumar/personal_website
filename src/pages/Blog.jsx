@@ -1,43 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import { Card } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
-import {db} from '../firebase/config'
-import { collection, getDocs, query } from 'firebase/firestore'
 
 
 function Blog() {
     const [blogs, setBlogs] = useState([]);
     useEffect(
-        ()=>{
-            const getBlogs = async ()=>{
-                const q = query(collection(db, 'blogs'))
-                const qss = await getDocs(q)
-                const blogList = qss.docs.map(doc=>Object.assign({}, {id: doc.id}, doc.data()))
-                setBlogs(blogList)
-            }
-            getBlogs()
+        () => {
+            fetch("https://www.googleapis.com/blogger/v3/blogs/3767182796654300486/posts?key=AIzaSyAEL7ORqPtS31-XAi-ZSlWLau36rN2TiVs&fields=items(id,title,published,url)")
+                .then(res => {
+                    res.json()
+                        .then((data => {
+                            setBlogs(data["items"])
+                        }))
+                })
         }, []
     )
     return (
         <>
-        <br/>
-        {
-            blogs.map(({id, title, description})=>{
-                return(
-                    <>
-                    <Card key={id} className='bg-dark'>
-                        <Card.Header>
-                            <Link to={"/blog/"+id}><h5 className='text-white'>{title}</h5></Link>
-                        </Card.Header>
-                        <Card.Body>
-                            {description}
-                        </Card.Body>
-                    </Card>
-                    <br />
-                    </>
-                )
-            })
-        }
+            <br />
+            {
+                blogs.map(({ id, url, title }) => {
+                    return (
+                        <div key={id.toString()} >
+                            <Card className='bg-dark'>
+                                <Card.Header>
+                                    <h3>{title}</h3>
+                                </Card.Header>
+                                <Card.Body>
+                                    <a href={url} target="_blank" rel="noreferrer">{url}</a>
+                                </Card.Body>
+                            </Card>
+                            <br />
+                        </div>
+                    )
+                })
+            }
         </>
     )
 }
