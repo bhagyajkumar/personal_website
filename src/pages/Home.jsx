@@ -17,7 +17,7 @@ function Home() {
                                 style={{ margin: "20px", border: "5px solid #666" }} />
                             <div style={{ "margin": 0, transform: "translateY(40%)" }}>
                                 <h1>BHAGYAJ KUMAR B</h1>
-                                <Button variant="outline-primary" href='mailto: bhagyajkumar1@gmail.com'>Get in touch with me</Button>
+                                <Button variant="outline-primary" href='mailto: mail@bhagyaj.in'>Get in touch with me</Button>
                             </div>
                         </div>
                         <br />
