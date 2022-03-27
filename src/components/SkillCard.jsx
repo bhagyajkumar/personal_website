@@ -5,7 +5,7 @@ function SkillCard(props) {
     return (
         <div>
             <br />
-            <Card className="bg-dark">
+            <Card className="bg-dark text-white">
                 <Card.Header>
                     <Card.Title>{ props.skillName }</Card.Title>
                 </Card.Header>
