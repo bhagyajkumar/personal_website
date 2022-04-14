@@ -38,5 +38,13 @@ export const skills = [
     {
         skillName: "Flutter",
         progress: 30
+    },
+    {
+	skillName: "Nginx",
+	progress: 25
+    },
+    {
+	skillName: "Linux",
+	progress: 20
     }
 ]
