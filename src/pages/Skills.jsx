@@ -1,5 +1,4 @@
 import React from 'react'
-import { CardGroup } from 'react-bootstrap'
 import SkillCard from '../components/SkillCard'
 import { skills } from '../data/skills'
 

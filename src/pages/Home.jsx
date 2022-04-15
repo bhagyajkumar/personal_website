@@ -3,6 +3,7 @@ import React from 'react'
 import pfp from "../assets/images/pfp.png"
 import { Card, Button } from 'react-bootstrap'
 import { logos } from '../data/logos.js'
+import "../timeline.css"
 
 function Home() {
     return (
@@ -45,6 +46,28 @@ function Home() {
                                         golang, bootstrap, heroku, fastapi, postgresql.
 
                                     </Card.Text>
+                                </Card.Body>
+                            </Card>
+                            <br />
+                            <Card className='bg-black'>
+                                <Card.Header><h2>Education</h2></Card.Header>
+                                <Card.Body>
+                                    <ul className='timeline'>
+                                        <li>
+                                            <h4>2008-2019</h4>
+                                            <p>Grade 1-10</p>
+                                            <p><b>SNGCS, Ezhukone</b></p>
+                                        </li>
+                                        <li>
+                                            <h4>2009-2021</h4>
+                                            <p>Grade 11-12</p>
+                                            <p><b>MGM, Kottarakkara</b></p>
+                                        </li>
+                                        <li>
+                                            <h4>2021-Present</h4>
+                                            <p>Cochin University College of Engineering, Kuttand</p>
+                                        </li>
+                                    </ul>
                                 </Card.Body>
                             </Card>
                             <br />
