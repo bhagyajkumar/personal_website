@@ -65,12 +65,11 @@ function Home() {
                                         </li>
                                         <li>
                                             <h4>2021-Present</h4>
-                                            <p>Cochin University College of Engineering, Kuttand</p>
+                                            <p><b>Cochin University College of Engineering, Kuttand</b></p>
                                         </li>
                                     </ul>
                                 </Card.Body>
                             </Card>
-                            <br />
                             <br />
                             <Card className="bg-black">
                                 <Card.Header><h2>Connect me on</h2></Card.Header>
