@@ -59,7 +59,7 @@ function Home() {
                                             <p><b>SNGCS, Ezhukone</b></p>
                                         </li>
                                         <li>
-                                            <h4>2009-2021</h4>
+                                            <h4>2019-2021</h4>
                                             <p>Grade 11-12</p>
                                             <p><b>MGM, Kottarakkara</b></p>
                                         </li>
