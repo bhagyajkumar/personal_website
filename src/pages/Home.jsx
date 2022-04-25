@@ -40,8 +40,7 @@ function Home() {
                                 <Card.Body>
                                     <Card.Text>
 
-                                        My name is Bhagyaj. I am passionate about programming and I am a Full Stack Developer.
-                                        I am currently learning flutter.
+                                        My name is Bhagyaj. I am passionate about programming and I am a web Developer.
                                         I am good with python, django, react, nodejs, mongodb, mysql, sqlite,
                                         golang, bootstrap, heroku, fastapi, postgresql.
 
