@@ -3,7 +3,7 @@ export const projects = [
         name: "Todo List API",
         description: "An API that covers authentication. and basic crud of a todo list. Meant for learning api calls for frontend developers",
         githubLink: "https://github.com/bhagyajkumar/todolist-api",
-        deployedLink: "https://fastapi-todolist.herokuapp.com/docs",
+        deployedLink: "https://todoapi.bhagyaj.tech/docs",
         platform: "FastAPI",
         deployToHerokuLink: "https://heroku.com/deploy?template=https://github.com/bhagyajkumar/todolist-api"
     },
